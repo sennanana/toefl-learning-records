@@ -28,14 +28,15 @@
 ## 听力
 
 - 材料：British Council - A team meeting about diversity。
-- Task 1：___ / ___
-- Task 2：___ / ___
-- 合计：___ / ___
+- Task 1：5 / 6（83%，首次作答）
+- Task 2：3 / 3（100%，首次作答）
+- 合计：8 / 9（89%）
 - 主旨分：___ / 3
 - 听懂比例：___ %
 - 生词：
-- 具体问题：
-- 解决动作：
+- 具体问题：Task 1 错因已确认：把 `has already done` 理解成“准备将要去做某事”。`has/have + past participle` 表示动作已在现在之前完成；`already` 强调“已经”。
+- 纠正：`has already done` = 已经做完；`is going to do` = 打算/将要做。
+- 解决动作：看到 `has/have + V-ed`，先标“已经完成”，不要预测未来。各写一句：`She has already finished the task.` / `She is going to finish the task.`，再重听原句。
 
 ## Day 6 完成确认
 
