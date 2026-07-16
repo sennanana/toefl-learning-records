@@ -133,13 +133,36 @@
   </main>
   <script>
     const storageKey="toefl-b1-day6-webpage";
+    const archivedState={
+      c5:true,
+      c7:true,
+      c8:true,
+      scoreSprout:"3/3",
+      feedbackVideo:`Sprout 视频主旨反馈
+评分：3/3（首次作答）
+
+原文：
+This video is mainly about a British people introduced famous British foods。In the videos，it make me impressive that he used simple english to show a British breakfast。for example，he show how to make a cup of tea and a beans on toast。it's very fun because i never see other nations' breakfast。
+
+润色版：
+This video is mainly about a British man introducing some famous British foods. He uses simple English to show a traditional British breakfast. For example, he shows how to make a cup of tea and beans on toast. I found it interesting because I had never seen breakfasts from other countries before.
+
+具体问题：
+1. 单数名词和动词不一致：a British people / he show / it make。
+2. 固定表达不自然：make me impressive 应为 impress me 或 I found it interesting。
+3. 概括视频时态不稳定，介绍内容时用现在时。
+4. example 后的细节正确，但每句只放一个动作更清楚。
+
+解决动作：
+下次按三句写：Who + main topic；For example + detail；I found it + adjective + because ...。写完逐个检查 he + verb-s、a/an + 单数名词、I found it + adjective。`
+    };
     const inputs=[...document.querySelectorAll("[data-save]")];
     const checks=inputs.filter(input=>input.type==="checkbox");
     const label=document.getElementById("progressLabel");
     const bar=document.getElementById("progressBar");
     function updateProgress(){const done=checks.filter(check=>check.checked).length;const total=checks.length;const percent=Math.round(done/total*100);label.textContent=`${percent}% complete · ${done}/${total}`;bar.style.width=`${percent}%`;}
     function save(){const state={};inputs.forEach(input=>{state[input.id]=input.type==="checkbox"?input.checked:input.value;});localStorage.setItem(storageKey,JSON.stringify(state));updateProgress();}
-    function load(){let state={};try{state=JSON.parse(localStorage.getItem(storageKey)||"{}");}catch(error){localStorage.removeItem(storageKey);}inputs.forEach(input=>{if(Object.hasOwn(state,input.id)){if(input.type==="checkbox"){input.checked=Boolean(state[input.id]);}else{input.value=state[input.id];}}});updateProgress();}
+    function load(){let saved={};try{saved=JSON.parse(localStorage.getItem(storageKey)||"{}");}catch(error){localStorage.removeItem(storageKey);}const state={...saved,...archivedState};inputs.forEach(input=>{if(Object.hasOwn(state,input.id)){if(input.type==="checkbox"){input.checked=Boolean(state[input.id]);}else{input.value=state[input.id];}}});updateProgress();}
     inputs.forEach(input=>input.addEventListener(input.type==="checkbox"?"change":"input",save));
     document.getElementById("resetButton").addEventListener("click",()=>{if(confirm("清空 Day 6 的勾选和学习记录？")){localStorage.removeItem(storageKey);load();}});
     load();
