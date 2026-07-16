@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Day 1：TOEFL B1 2小时学习计划</title>
+  <link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="small">Lesson 0002</p>
+      <h1>Day 1：抓主旨</h1>
+      <p class="lede">今天目标很小：听和读都先抓 main idea。不要追每个词。完整打勾，比完美更重要。</p>
+    </header>
+
+    <section class="note">
+      <p>今日材料：Sprout 选 1 个 B1 native-speaker blog/video；听力做 <a href="https://learnenglish.britishcouncil.org/free-resources/listening/b1/student-discussion">A student discussion</a>；阅读做 <a href="https://learnenglish.britishcouncil.org/free-resources/reading/b1/digital-habits-across-generations">Digital habits across generations</a>。</p>
+    </section>
+
+    <section>
+      <h2>120 分钟 checklist</h2>
+      <ul class="checklist">
+        <li><input type="checkbox"><span><strong>0:00-0:10 热身</strong>：写目标 I can understand the main idea. 预习 compare, similar, different, distance, generation, habit, social media, addiction。</span></li>
+        <li><input type="checkbox"><span><strong>0:10-0:35 Sprout 泛听</strong>：第一遍不看字幕；写 3 个关键词；写 This blog is mainly about ...</span></li>
+        <li><input type="checkbox"><span><strong>0:35-0:50 Sprout 精听</strong>：第二遍看字幕；跟读 5 句；记录 3 个可复用表达。</span></li>
+        <li><input type="checkbox"><span><strong>0:50-1:15 B1 听力题</strong>：做 A student discussion。先 preparation，再听音频，做 Task 1 和 Task 2。只记录第一次答案。</span></li>
+        <li><input type="checkbox"><span><strong>1:15-1:45 B1 阅读题</strong>：做 Digital habits across generations。先预测主题，快速读，写主旨，再做 Task 1 和 Task 2。</span></li>
+        <li><input type="checkbox"><span><strong>1:45-1:55 TOEFL 桥接</strong>：60 秒英文口头总结，或写 80 词总结。必须用 however, for example, because。</span></li>
+        <li><input type="checkbox"><span><strong>1:55-2:00 记录</strong>：写 Sprout 主旨分、听力正确率、阅读正确率、最大问题、明天复习 5 个词。</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>今日句型</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>用途</th>
+            <th>句型</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>听力主旨</td><td>The discussion is mainly about ...</td></tr>
+          <tr><td>阅读主旨</td><td>The article is mainly about ...</td></tr>
+          <tr><td>举例</td><td>For example, ...</td></tr>
+          <tr><td>转折</td><td>However, ...</td></tr>
+          <tr><td>原因</td><td>This is important because ...</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="quiz" aria-labelledby="quiz-title">
+      <h2 id="quiz-title">结束前小测</h2>
+      <p class="small">第一次答案保存。错了可改，但得分只看第一次。</p>
+
+      <div class="q" data-key="q1" data-answer="抓住主旨">
+        <h3>Day 1 最大目标是什么？</h3>
+        <div class="choices">
+          <button type="button">背完全文</button>
+          <button type="button">抓住主旨</button>
+          <button type="button">查完生词</button>
+        </div>
+        <p class="feedback"></p>
+      </div>
+
+      <div class="q" data-key="q2" data-answer="不看字幕">
+        <h3>Sprout 第一遍应该怎样听？</h3>
+        <div class="choices">
+          <button type="button">边看字幕</button>
+          <button type="button">不看字幕</button>
+          <button type="button">只看文本</button>
+        </div>
+        <p class="feedback"></p>
+      </div>
+
+      <div class="q" data-key="q3" data-answer="第一次答案">
+        <h3>听力题分数记录哪个答案？</h3>
+        <div class="choices">
+          <button type="button">最后答案</button>
+          <button type="button">最熟答案</button>
+          <button type="button">第一次答案</button>
+        </div>
+        <p class="feedback"></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Primary source</h2>
+      <p>今日主资源来自 British Council B1 listening/reading lessons。它们每课有 preparation、材料和两组理解任务。做完不清楚的题，问我，我继续拆错因。</p>
+    </section>
+  </main>
+
+  <script>
+    const storePrefix = "lesson-0002-day1-";
+
+    function paintQuestion(question) {
+      const key = storePrefix + question.dataset.key;
+      const first = localStorage.getItem(key);
+      const answer = question.dataset.answer;
+      const feedback = question.querySelector(".feedback");
+      const buttons = [...question.querySelectorAll("button")];
+
+      buttons.forEach((button) => {
+        button.classList.remove("correct", "wrong");
+        if (first && button.textContent === first) {
+          button.classList.add(first === answer ? "correct" : "wrong");
+        }
+      });
+
+      if (!first) {
+        feedback.textContent = "";
+      } else if (first === answer) {
+        feedback.textContent = "第一次正确。";
+      } else {
+        feedback.textContent = `第一次选了「${first}」。正确是「${answer}」。记住原因，分数不恢复。`;
+      }
+    }
+
+    document.querySelectorAll(".q").forEach((question) => {
+      const key = storePrefix + question.dataset.key;
+      question.addEventListener("click", (event) => {
+        if (event.target.tagName !== "BUTTON") return;
+        if (!localStorage.getItem(key)) {
+          localStorage.setItem(key, event.target.textContent);
+        }
+        paintQuestion(question);
+      });
+      paintQuestion(question);
+    });
+  </script>
+</body>
+</html>

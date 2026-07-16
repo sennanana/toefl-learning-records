@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TOEFL B1 Day 1 学习计划</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172023;
+      --muted: #5d696d;
+      --paper: #fffdf7;
+      --line: #d8ddd7;
+      --green: #2f7d6d;
+      --blue: #355f9f;
+      --clay: #9a4f2e;
+      --soft-green: #edf5f2;
+      --soft-blue: #eef3fb;
+      --soft-clay: #f7eadf;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: ui-serif, Georgia, "Times New Roman", "Noto Serif SC", serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .page {
+      width: min(980px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 64px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 22px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-family: ui-sans-serif, system-ui, "Noto Sans SC", sans-serif;
+      font-size: .92rem;
+      margin: 0 0 8px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.18;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 7vw, 4.2rem);
+      max-width: 820px;
+    }
+
+    .lede {
+      color: var(--muted);
+      font-size: 1.12rem;
+      max-width: 72ch;
+    }
+
+    .topbar {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+      margin-top: 22px;
+    }
+
+    .progress-wrap {
+      flex: 1 1 260px;
+      max-width: 520px;
+    }
+
+    .progress-label {
+      color: var(--muted);
+      font-family: ui-sans-serif, system-ui, "Noto Sans SC", sans-serif;
+      font-size: .9rem;
+      margin-bottom: 6px;
+    }
+
+    .progress {
+      background: #e8ece7;
+      border-radius: 999px;
+      height: 10px;
+      overflow: hidden;
+    }
+
+    .progress span {
+      background: linear-gradient(90deg, var(--green), var(--blue));
+      display: block;
+      height: 100%;
+      width: 0;
+    }
+
+    button {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--ink);
+      cursor: pointer;
+      font: 650 .92rem ui-sans-serif, system-ui, "Noto Sans SC", sans-serif;
+      padding: 9px 12px;
+    }
+
+    button:hover {
+      border-color: var(--green);
+    }
+
+    section {
+      border-bottom: 1px solid var(--line);
+      padding: 26px 0;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      margin-bottom: 14px;
+    }
+
+    h3 {
+      font-size: 1rem;
+      margin: 18px 0 8px;
+    }
+
+    .materials {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    }
+
+    .material {
+      border-top: 3px solid var(--green);
+      padding-top: 12px;
+    }
+
+    .material:nth-child(2) {
+      border-top-color: var(--blue);
+    }
+
+    .material:nth-child(3) {
+      border-top-color: var(--clay);
+    }
+
+    .material p {
+      margin: 8px 0 0;
+    }
+
+    .time-block {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: minmax(92px, 120px) 1fr;
+      padding: 18px 0;
+    }
+
+    .time-block + .time-block {
+      border-top: 1px solid var(--line);
+    }
+
+    .time {
+      color: var(--clay);
+      font-family: ui-sans-serif, system-ui, "Noto Sans SC", sans-serif;
+      font-size: .86rem;
+      font-weight: 800;
+    }
+
+    .focus {
+      background: var(--soft-green);
+      border-left: 4px solid var(--green);
+      margin: 20px 0 0;
+      padding: 14px 16px;
+    }
+
+    .note {
+      background: var(--soft-blue);
+      border-left: 4px solid var(--blue);
+      padding: 14px 16px;
+    }
+
+    .record {
+      background: var(--soft-clay);
+      border-left: 4px solid var(--clay);
+      padding: 14px 16px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    li + li {
+      margin-top: .38rem;
+    }
+
+    .checklist {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .checklist li {
+      align-items: flex-start;
+      display: flex;
+      gap: .65rem;
+      margin-top: .7rem;
+    }
+
+    input[type="checkbox"] {
+      accent-color: var(--green);
+      height: 17px;
+      margin-top: .36rem;
+      width: 17px;
+    }
+
+    label {
+      cursor: pointer;
+    }
+
+    .sentence-bank {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .sentence-bank th,
+    .sentence-bank td {
+      border-bottom: 1px solid var(--line);
+      padding: 10px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .sentence-bank th {
+      font-family: ui-sans-serif, system-ui, "Noto Sans SC", sans-serif;
+      font-size: .82rem;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+    }
+
+    textarea,
+    input[type="text"] {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--ink);
+      font: 1rem ui-serif, Georgia, "Times New Roman", "Noto Serif SC", serif;
+      min-height: 44px;
+      padding: 10px;
+      width: 100%;
+    }
+
+    textarea {
+      min-height: 92px;
+      resize: vertical;
+    }
+
+    .fields {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    }
+
+    .field span {
+      color: var(--muted);
+      display: block;
+      font-family: ui-sans-serif, system-ui, "Noto Sans SC", sans-serif;
+      font-size: .85rem;
+      margin-bottom: 4px;
+    }
+
+    .small {
+      color: var(--muted);
+      font-family: ui-sans-serif, system-ui, "Noto Sans SC", sans-serif;
+      font-size: .9rem;
+    }
+
+    @media (max-width: 620px) {
+      .time-block {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      .page {
+        width: 100%;
+        padding: 0;
+      }
+
+      .topbar button {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <p class="meta">TOEFL B1 Daily Plan · Day 1 · 2026-07-06</p>
+      <h1>Day 1：抓住主旨</h1>
+      <p class="lede">今天不追求听懂每个词。目标是完成 2 小时训练，并能用英文说出听力和阅读的 main idea。</p>
+      <div class="topbar">
+        <div class="progress-wrap">
+          <div class="progress-label" id="progressLabel">0% complete</div>
+          <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+        </div>
+        <button type="button" id="resetButton">清空勾选</button>
+        <button type="button" onclick="window.print()">打印</button>
+      </div>
+    </header>
+
+    <section>
+      <h2>已完成归档</h2>
+      <div class="record">
+        <p><strong>状态：</strong>Day 1 已完成，2026-07-07 确认。</p>
+        <p><strong>已报告成绩：</strong>5/6 (83%)，2/3，British Council listening Task 1: 5/8 (63%)，Task 2: 4/6 (67%)，听力合计 9/14 (64%)。</p>
+        <p><strong>学习判断：</strong>B1 主旨理解已开始建立，但听力细节和选项匹配还不稳。Day 2 继续 B1，不升级。</p>
+        <p class="small">归档说明：原网页勾选和输入保存在浏览器 localStorage，不会自动写进 HTML 文件。这里是归档时写入的静态完成记录。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>今日材料</h2>
+      <div class="materials">
+        <article class="material">
+          <h3>Sprout</h3>
+          <p>选 1 个 B1 English native-speaker blog/video。主题优先选生活、学习、科技、旅行。</p>
+        </article>
+        <article class="material">
+          <h3>听力</h3>
+          <p><a href="https://learnenglish.britishcouncil.org/free-resources/listening/b1/student-discussion">British Council - A student discussion</a></p>
+        </article>
+        <article class="material">
+          <h3>阅读</h3>
+          <p><a href="https://learnenglish.britishcouncil.org/free-resources/reading/b1/digital-habits-across-generations">British Council - Digital habits across generations</a></p>
+        </article>
+      </div>
+      <div class="focus">
+        <strong>今日判断标准：</strong>能写出 2 个英文主旨句。一个来自 Sprout，一个来自阅读或听力。
+      </div>
+    </section>
+
+    <section>
+      <h2>120 分钟 checklist</h2>
+
+      <div class="time-block">
+        <div class="time">0:00-0:10</div>
+        <div>
+          <h3>热身复习</h3>
+          <ul class="checklist">
+            <li><input id="c1" type="checkbox"><label for="c1">准备笔记页，写标题：Day 1 - Main Idea。</label></li>
+            <li><input id="c2" type="checkbox"><label for="c2">写下目标：I can understand the main idea.</label></li>
+            <li><input id="c3" type="checkbox"><label for="c3">预习 compare, similar, different, distance, generation, habit, social media, addiction。</label></li>
+            <li><input id="c4" type="checkbox"><label for="c4">每个词口头造 1 个简单句。</label></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="time-block">
+        <div class="time">0:10-0:35</div>
+        <div>
+          <h3>Sprout B1 泛听</h3>
+          <ul class="checklist">
+            <li><input id="c5" type="checkbox"><label for="c5">选 1 个 B1 native-speaker blog/video。</label></li>
+            <li><input id="c6" type="checkbox"><label for="c6">第一遍不看字幕。</label></li>
+            <li><input id="c7" type="checkbox"><label for="c7">写 3 个关键词。</label></li>
+            <li><input id="c8" type="checkbox"><label for="c8">写 1 句英文主旨：This blog is mainly about ...</label></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="time-block">
+        <div class="time">0:35-0:50</div>
+        <div>
+          <h3>Sprout 精听</h3>
+          <ul class="checklist">
+            <li><input id="c9" type="checkbox"><label for="c9">第二遍听，可以看字幕。</label></li>
+            <li><input id="c10" type="checkbox"><label for="c10">暂停跟读 5 句。</label></li>
+            <li><input id="c11" type="checkbox"><label for="c11">记录 3 个可复用表达。</label></li>
+            <li><input id="c12" type="checkbox"><label for="c12">选 1 句最有用句子，改成自己的句子。</label></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="time-block">
+        <div class="time">0:50-1:15</div>
+        <div>
+          <h3>B1 听力习题</h3>
+          <ul class="checklist">
+            <li><input id="c13" type="checkbox"><label for="c13">打开 A student discussion，先做 preparation task。</label></li>
+            <li><input id="c14" type="checkbox"><label for="c14">听第一遍，不看 transcript。</label></li>
+            <li><input id="c15" type="checkbox"><label for="c15">写主旨：Two students are comparing ...</label></li>
+            <li><input id="c16" type="checkbox"><label for="c16">做 Task 1 和 Task 2，只记录第一次答案分数。</label></li>
+            <li><input id="c17" type="checkbox"><label for="c17">看 transcript，找 3 个表示比较的词或短语。</label></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="time-block">
+        <div class="time">1:15-1:45</div>
+        <div>
+          <h3>B1 阅读习题</h3>
+          <ul class="checklist">
+            <li><input id="c18" type="checkbox"><label for="c18">打开 Digital habits across generations，先看标题，预测主题。</label></li>
+            <li><input id="c19" type="checkbox"><label for="c19">3 分钟快速读全文，只抓主旨。</label></li>
+            <li><input id="c20" type="checkbox"><label for="c20">写 1 句主旨：The article is mainly about ...</label></li>
+            <li><input id="c21" type="checkbox"><label for="c21">做 Task 1 和 Task 2。</label></li>
+            <li><input id="c22" type="checkbox"><label for="c22">每道错题标出答案来自哪一句。</label></li>
+            <li><input id="c23" type="checkbox"><label for="c23">收 5 个生词，不超过 5 个。</label></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="time-block">
+        <div class="time">1:45-1:55</div>
+        <div>
+          <h3>TOEFL 桥接</h3>
+          <ul class="checklist">
+            <li><input id="c24" type="checkbox"><label for="c24">口头总结 60 秒，或写 80 词英文总结。</label></li>
+            <li><input id="c25" type="checkbox"><label for="c25">总结里包含 however。</label></li>
+            <li><input id="c26" type="checkbox"><label for="c26">总结里包含 for example。</label></li>
+            <li><input id="c27" type="checkbox"><label for="c27">总结里包含 because。</label></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="time-block">
+        <div class="time">1:55-2:00</div>
+        <div>
+          <h3>记录</h3>
+          <ul class="checklist">
+            <li><input id="c28" type="checkbox"><label for="c28">写 Sprout 主旨分、听力正确率、阅读正确率。</label></li>
+            <li><input id="c29" type="checkbox"><label for="c29">圈出今日最大问题：主旨 / 细节 / 词汇 / 速度。</label></li>
+            <li><input id="c30" type="checkbox"><label for="c30">写明天复习 5 个词。</label></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>今日句型</h2>
+      <table class="sentence-bank">
+        <thead>
+          <tr>
+            <th>用途</th>
+            <th>句型</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Sprout 主旨</td><td>This blog is mainly about ...</td></tr>
+          <tr><td>听力主旨</td><td>The discussion is mainly about ...</td></tr>
+          <tr><td>阅读主旨</td><td>The article is mainly about ...</td></tr>
+          <tr><td>举例</td><td>For example, ...</td></tr>
+          <tr><td>转折</td><td>However, ...</td></tr>
+          <tr><td>原因</td><td>This is important because ...</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>学习记录区</h2>
+      <div class="fields">
+        <label class="field"><span>Sprout 主旨分 / 3</span><input id="scoreSprout" type="text" placeholder="例如：2/3"></label>
+        <label class="field"><span>听力正确率</span><input id="scoreListening" type="text" placeholder="例如：70%"></label>
+        <label class="field"><span>阅读正确率</span><input id="scoreReading" type="text" placeholder="例如：80%"></label>
+      </div>
+      <h3>2 个英文主旨句</h3>
+      <textarea id="mainIdeas" placeholder="1. This blog is mainly about ...&#10;2. The article is mainly about ..."></textarea>
+      <h3>明天复习 5 个词</h3>
+      <textarea id="reviewWords" placeholder="compare, similar, ..."></textarea>
+      <div class="record">
+        <strong>完成标准：</strong>Sprout 2 遍 + 1 篇 B1 听力 + 1 篇 B1 阅读 + 2 个英文主旨句 + 1 个错因。
+      </div>
+    </section>
+
+    <section>
+      <h2>明天怎么接</h2>
+      <p>Day 2 重点改成阅读定位。今天错题不要反复重做；明天开头只复习错因和 5 个词。</p>
+      <p class="small">Markdown 版计划：<a href="toefl-b1-day1-plan.md">toefl-b1-day1-plan.md</a></p>
+    </section>
+  </main>
+
+  <script>
+    const key = "toefl-b1-day1-webpage";
+    const archivedState = Object.freeze({});
+    const checkboxes = [...document.querySelectorAll('input[type="checkbox"]')];
+    const fields = [...document.querySelectorAll('input[type="text"], textarea')];
+    const progressLabel = document.getElementById("progressLabel");
+    const progressBar = document.getElementById("progressBar");
+    const resetButton = document.getElementById("resetButton");
+
+    function loadState() {
+      const saved = { ...JSON.parse(localStorage.getItem(key) || "{}"), ...archivedState };
+      checkboxes.forEach((checkbox) => {
+        checkbox.checked = Boolean(saved[checkbox.id]);
+      });
+      fields.forEach((field) => {
+        field.value = saved[field.id] || "";
+      });
+      updateProgress();
+    }
+
+    function saveState() {
+      const state = {};
+      checkboxes.forEach((checkbox) => {
+        state[checkbox.id] = checkbox.checked;
+      });
+      fields.forEach((field) => {
+        state[field.id] = field.value;
+      });
+      localStorage.setItem(key, JSON.stringify(state));
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const done = checkboxes.filter((checkbox) => checkbox.checked).length;
+      const total = checkboxes.length;
+      const pct = total ? Math.round((done / total) * 100) : 0;
+      progressLabel.textContent = `${pct}% complete · ${done}/${total}`;
+      progressBar.style.width = `${pct}%`;
+    }
+
+    checkboxes.forEach((checkbox) => checkbox.addEventListener("change", saveState));
+    fields.forEach((field) => field.addEventListener("input", saveState));
+    resetButton.addEventListener("click", () => {
+      if (!confirm("清空 Day 1 勾选和记录？")) return;
+      localStorage.removeItem(key);
+      loadState();
+    });
+    loadState();
+  </script>
+</body>
+</html>

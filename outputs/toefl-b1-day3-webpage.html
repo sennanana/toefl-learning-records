@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TOEFL B1 Day 3 学习计划</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172023;
+      --muted: #5d696d;
+      --paper: #fffdf7;
+      --line: #d8ddd7;
+      --green: #2f7d6d;
+      --blue: #355f9f;
+      --clay: #9a4f2e;
+      --soft-green: #edf5f2;
+      --soft-blue: #eef3fb;
+      --soft-clay: #f7eadf;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: ui-serif, Georgia, "Times New Roman", "Noto Serif SC", serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .page {
+      width: min(980px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 64px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 22px;
+    }
+
+    .meta,
+    .small,
+    button,
+    .progress-label,
+    .time,
+    .field span,
+    th {
+      font-family: ui-sans-serif, system-ui, "Noto Sans SC", sans-serif;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: .92rem;
+      margin: 0 0 8px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.18;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 7vw, 4.2rem);
+      max-width: 820px;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      margin-bottom: 14px;
+    }
+
+    h3 {
+      font-size: 1rem;
+      margin: 18px 0 8px;
+    }
+
+    .lede {
+      color: var(--muted);
+      font-size: 1.12rem;
+      max-width: 72ch;
+    }
+
+    .topbar {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+      margin-top: 22px;
+    }
+
+    .progress-wrap {
+      flex: 1 1 260px;
+      max-width: 520px;
+    }
+
+    .progress-label {
+      color: var(--muted);
+      font-size: .9rem;
+      margin-bottom: 6px;
+    }
+
+    .progress {
+      background: #e8ece7;
+      border-radius: 999px;
+      height: 10px;
+      overflow: hidden;
+    }
+
+    .progress span {
+      background: linear-gradient(90deg, var(--green), var(--blue));
+      display: block;
+      height: 100%;
+      width: 0;
+    }
+
+    button {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--ink);
+      cursor: pointer;
+      font-size: .92rem;
+      font-weight: 650;
+      padding: 9px 12px;
+    }
+
+    button:hover { border-color: var(--green); }
+
+    section {
+      border-bottom: 1px solid var(--line);
+      padding: 26px 0;
+    }
+
+    .materials {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    }
+
+    .material {
+      border-top: 3px solid var(--green);
+      padding-top: 12px;
+    }
+
+    .material:nth-child(2) { border-top-color: var(--blue); }
+    .material:nth-child(3) { border-top-color: var(--clay); }
+    .material p { margin: 8px 0 0; }
+
+    .focus,
+    .note,
+    .record {
+      margin: 20px 0 0;
+      padding: 14px 16px;
+    }
+
+    .focus {
+      background: var(--soft-green);
+      border-left: 4px solid var(--green);
+    }
+
+    .note {
+      background: var(--soft-blue);
+      border-left: 4px solid var(--blue);
+    }
+
+    .record {
+      background: var(--soft-clay);
+      border-left: 4px solid var(--clay);
+    }
+
+    .time-block {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: minmax(92px, 120px) 1fr;
+      padding: 18px 0;
+    }
+
+    .time-block + .time-block { border-top: 1px solid var(--line); }
+
+    .time {
+      color: var(--clay);
+      font-size: .86rem;
+      font-weight: 800;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    li + li { margin-top: .38rem; }
+
+    .checklist {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .checklist li {
+      align-items: flex-start;
+      display: flex;
+      gap: .65rem;
+      margin-top: .7rem;
+    }
+
+    input[type="checkbox"] {
+      accent-color: var(--green);
+      height: 17px;
+      margin-top: .36rem;
+      width: 17px;
+    }
+
+    label { cursor: pointer; }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 10px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      font-size: .82rem;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+    }
+
+    textarea,
+    input[type="text"] {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--ink);
+      font: 1rem ui-serif, Georgia, "Times New Roman", "Noto Serif SC", serif;
+      min-height: 44px;
+      padding: 10px;
+      width: 100%;
+    }
+
+    textarea {
+      min-height: 92px;
+      resize: vertical;
+    }
+
+    .fields {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    }
+
+    .field span {
+      color: var(--muted);
+      display: block;
+      font-size: .85rem;
+      margin-bottom: 4px;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    @media (max-width: 620px) {
+      .time-block { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      body { background: white; }
+      .page { width: 100%; padding: 0; }
+      .topbar button { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <p class="meta">TOEFL B1 Daily Plan · Day 3 · 2026-07-10</p>
+      <h1>Day 3：听力细节</h1>
+      <p class="lede">今天核心：听前预测关键词，听后给错题分类。Day 2 总体 21/26，但 3/6 那组不稳，所以先稳住 B1 细节。</p>
+      <div class="topbar">
+        <div class="progress-wrap">
+          <div class="progress-label" id="progressLabel">0% complete</div>
+          <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+        </div>
+        <button type="button" id="resetButton">清空勾选</button>
+        <button type="button" onclick="window.print()">打印</button>
+      </div>
+    </header>
+
+    <section>
+      <h2>已完成归档</h2>
+      <div class="record">
+        <p><strong>状态：</strong>Day 3 已完成，2026-07-10 确认。</p>
+        <p><strong>阅读成绩：</strong>7/12 (58%)，5/6 (83%)，合计 12/18 (67%)。</p>
+        <p><strong>听力成绩：</strong>4/6 (67%)，7/8 (88%)，合计 11/14 (79%)。</p>
+        <p><strong>学习判断：</strong>听力过 75%，可以在 Day 4 加 1 个很短 B1+ listening stretch item；阅读 67%，Day 4 仍要做 B1 阅读定位复盘。</p>
+        <p class="small">归档说明：浏览器保存的勾选、成绩和桥接回答已迁移到 HTML 内置归档状态，换浏览器或换端口后仍可显示。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>今日材料</h2>
+      <div class="materials">
+        <article class="material">
+          <h3>Sprout</h3>
+          <p>选 1 个 B1 English native-speaker blog/video。优先选学习、工作、心理、健康、效率类主题。</p>
+        </article>
+        <article class="material">
+          <h3>听力</h3>
+          <p><a href="https://learnenglish.britishcouncil.org/free-resources/listening/b1/introduction-lecture">British Council - An introduction to a lecture</a></p>
+        </article>
+        <article class="material">
+          <h3>阅读</h3>
+          <p><a href="https://learnenglish.britishcouncil.org/free-resources/reading/b1/planning-event">British Council - Planning an event</a></p>
+        </article>
+      </div>
+      <div class="focus">
+        <strong>今日判断标准：</strong>每道错题都能归到一个错因：关键词 / 选项混淆 / 题干 / 时间压力。
+      </div>
+    </section>
+
+    <section>
+      <h2>120 分钟 checklist</h2>
+
+      <div class="time-block">
+        <div class="time">0:00-0:10</div>
+        <div>
+          <h3>Day 2 错题复盘</h3>
+          <ul class="checklist">
+            <li><input id="c1" type="checkbox"><label for="c1">看 Day 2 的 3/6 那组错题。</label></li>
+            <li><input id="c2" type="checkbox"><label for="c2">每道错题只写 1 个错因。</label></li>
+            <li><input id="c3" type="checkbox"><label for="c3">选一个最常见错因，写到今天标题下。</label></li>
+            <li><input id="c4" type="checkbox"><label for="c4">重听或重看错题附近 30 秒。</label></li>
+            <li><input id="c5" type="checkbox"><label for="c5">写提醒：Listen for keywords, not every word.</label></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="time-block">
+        <div class="time">0:10-0:30</div>
+        <div>
+          <h3>Sprout B1 泛听</h3>
+          <ul class="checklist">
+            <li><input id="c6" type="checkbox"><label for="c6">选 1 个 B1 native-speaker blog/video。</label></li>
+            <li><input id="c7" type="checkbox"><label for="c7">第一遍不看字幕。</label></li>
+            <li><input id="c8" type="checkbox"><label for="c8">写 5 个听到的关键词。</label></li>
+            <li><input id="c9" type="checkbox"><label for="c9">写 1 句主旨：This blog is mainly about ...</label></li>
+            <li><input id="c10" type="checkbox"><label for="c10">给自己打分：主旨 0 / 1 / 2 / 3。</label></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="time-block">
+        <div class="time">0:30-0:45</div>
+        <div>
+          <h3>Sprout 精听</h3>
+          <ul class="checklist">
+            <li><input id="c11" type="checkbox"><label for="c11">第二遍听，可以看字幕。</label></li>
+            <li><input id="c12" type="checkbox"><label for="c12">暂停跟读 5 句。</label></li>
+            <li><input id="c13" type="checkbox"><label for="c13">抄 3 个表示原因、步骤、结果的表达。</label></li>
+            <li><input id="c14" type="checkbox"><label for="c14">标出 2 个信号词：first / then / because / so / however。</label></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="time-block">
+        <div class="time">0:45-1:15</div>
+        <div>
+          <h3>B1 听力细节</h3>
+          <ul class="checklist">
+            <li><input id="c15" type="checkbox"><label for="c15">打开 An introduction to a lecture，先看标题预测话题。</label></li>
+            <li><input id="c16" type="checkbox"><label for="c16">做 preparation task。</label></li>
+            <li><input id="c17" type="checkbox"><label for="c17">听第一遍，不看 transcript。</label></li>
+            <li><input id="c18" type="checkbox"><label for="c18">写主旨：The lecture introduction is mainly about ...</label></li>
+            <li><input id="c19" type="checkbox"><label for="c19">做 Task 1 和 Task 2，只记录第一次答案。</label></li>
+            <li><input id="c20" type="checkbox"><label for="c20">看 transcript，标出 5 个细节信号：time / order / example / reason / contrast。</label></li>
+            <li><input id="c21" type="checkbox"><label for="c21">每道错题写错因。</label></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="time-block">
+        <div class="time">1:15-1:40</div>
+        <div>
+          <h3>B1 阅读细节</h3>
+          <ul class="checklist">
+            <li><input id="c22" type="checkbox"><label for="c22">打开 Planning an event，先看版式和人名。</label></li>
+            <li><input id="c23" type="checkbox"><label for="c23">圈出所有 person、task、time。</label></li>
+            <li><input id="c24" type="checkbox"><label for="c24">做 preparation task。</label></li>
+            <li><input id="c25" type="checkbox"><label for="c25">做 Task 1 和 Task 2。</label></li>
+            <li><input id="c26" type="checkbox"><label for="c26">每题写证据：person / task / time / exact sentence。</label></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="time-block">
+        <div class="time">1:40-1:55</div>
+        <div>
+          <h3>TOEFL 桥接</h3>
+          <ul class="checklist">
+            <li><input id="c27" type="checkbox"><label for="c27">写或说 80 词：What is the lecture mainly about, and what detail helped you understand it?</label></li>
+            <li><input id="c28" type="checkbox"><label for="c28">必须用 The lecture is mainly about ...</label></li>
+            <li><input id="c29" type="checkbox"><label for="c29">必须用 One important detail is ...</label></li>
+            <li><input id="c30" type="checkbox"><label for="c30">必须包含 because / so / therefore。</label></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="time-block">
+        <div class="time">1:55-2:00</div>
+        <div>
+          <h3>记录</h3>
+          <ul class="checklist">
+            <li><input id="c31" type="checkbox"><label for="c31">写 Sprout 主旨分。</label></li>
+            <li><input id="c32" type="checkbox"><label for="c32">写听力 Task 1 / Task 2 分数。</label></li>
+            <li><input id="c33" type="checkbox"><label for="c33">写阅读 Task 1 / Task 2 分数。</label></li>
+            <li><input id="c34" type="checkbox"><label for="c34">写今日最大错因。</label></li>
+            <li><input id="c35" type="checkbox"><label for="c35">写明天复习 5 个词。</label></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>错因分类表</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>错因</th>
+            <th>判断标准</th>
+            <th>修法</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>关键词</td><td>题目词听到了，但答案附近词没抓住</td><td>听前预测 5 个可能关键词</td></tr>
+          <tr><td>选项混淆</td><td>两个选项都像对</td><td>回 transcript 找 exact phrase</td></tr>
+          <tr><td>题干</td><td>题目问什么没看清</td><td>先圈 who / when / why / what</td></tr>
+          <tr><td>时间压力</td><td>听懂但来不及选</td><td>先写缩写，不写完整句</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>学习记录区</h2>
+      <div class="fields">
+        <label class="field"><span>Sprout 主旨分 / 3</span><input id="scoreSprout" type="text" placeholder="例如：2/3"></label>
+        <label class="field"><span>听力 Task 1</span><input id="scoreListening1" type="text" placeholder="例如：5/6"></label>
+        <label class="field"><span>听力 Task 2</span><input id="scoreListening2" type="text" placeholder="例如：6/8"></label>
+        <label class="field"><span>阅读 Task 1</span><input id="scoreReading1" type="text" placeholder="例如：5/6"></label>
+        <label class="field"><span>阅读 Task 2</span><input id="scoreReading2" type="text" placeholder="例如：6/6"></label>
+        <label class="field"><span>最大错因</span><input id="mainError" type="text" placeholder="关键词 / 选项混淆 / 题干 / 时间压力"></label>
+      </div>
+      <h3>错因记录</h3>
+      <textarea id="errorLog" placeholder="Q1: answer = ..., my mistake = ...&#10;Q2: ..."></textarea>
+      <h3>TOEFL 桥接回答</h3>
+      <textarea id="bridgeAnswer" placeholder="The lecture is mainly about ... One important detail is ... because ..."></textarea>
+      <h3>明天复习 5 个词</h3>
+      <textarea id="reviewWords" placeholder="keyword, detail, reason, example, contrast"></textarea>
+      <div class="record">
+        <strong>完成标准：</strong>Day 2 错题复盘 + Sprout 2 遍 + 1 篇 B1 听力 + 1 篇 B1 阅读 + 每道错题写错因。
+      </div>
+    </section>
+
+    <section>
+      <h2>明天怎么接</h2>
+      <p>若 Day 3 听力合计低于 75%，Day 4 继续 B1。若高于 75%，Day 4 仍以 B1 为主，只加 1 个 B1+ stretch item。</p>
+      <p class="small">Markdown 版计划：<a href="toefl-b1-day3-plan.md">toefl-b1-day3-plan.md</a></p>
+    </section>
+  </main>
+
+  <script>
+    const key = "toefl-b1-day3-webpage";
+    const archivedState = Object.freeze({
+      c1: true, c2: true, c3: true, c4: true, c5: true, c6: true, c7: true, c8: true, c9: true, c10: true,
+      c11: true, c12: true, c13: true, c14: true, c15: true, c16: true, c17: true, c18: true, c19: true, c20: true,
+      c21: true, c22: true, c23: true, c24: true, c25: true, c26: true, c27: true, c28: true, c29: true, c30: true,
+      c31: true, c32: true, c33: true, c34: true, c35: true,
+      scoreSprout: "2/3",
+      scoreListening1: "4/6",
+      scoreListening2: "7/8",
+      scoreReading1: "7/12",
+      scoreReading2: "5/6",
+      mainError: "没有理解词汇表达的意思",
+      bridgeAnswer: "The lecture introduction is mainly about what a happy life is. At first, the teacher talked about what makes people happy. Then, the teacher explained the idea of flow, which means a state where people focus deeply on something and enjoy the process. This helped me understand positive psychology better. Now I understand what I should do if I want to find happiness in my daily life."
+    });
+    const checkboxes = [...document.querySelectorAll('input[type="checkbox"]')];
+    const fields = [...document.querySelectorAll('input[type="text"], textarea')];
+    const progressLabel = document.getElementById("progressLabel");
+    const progressBar = document.getElementById("progressBar");
+    const resetButton = document.getElementById("resetButton");
+
+    function loadState() {
+      const saved = { ...JSON.parse(localStorage.getItem(key) || "{}"), ...archivedState };
+      checkboxes.forEach((checkbox) => {
+        checkbox.checked = Boolean(saved[checkbox.id]);
+      });
+      fields.forEach((field) => {
+        field.value = saved[field.id] || "";
+      });
+      updateProgress();
+    }
+
+    function saveState() {
+      const state = {};
+      checkboxes.forEach((checkbox) => {
+        state[checkbox.id] = checkbox.checked;
+      });
+      fields.forEach((field) => {
+        state[field.id] = field.value;
+      });
+      localStorage.setItem(key, JSON.stringify(state));
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const done = checkboxes.filter((checkbox) => checkbox.checked).length;
+      const total = checkboxes.length;
+      const pct = total ? Math.round((done / total) * 100) : 0;
+      progressLabel.textContent = `${pct}% complete · ${done}/${total}`;
+      progressBar.style.width = `${pct}%`;
+    }
+
+    checkboxes.forEach((checkbox) => checkbox.addEventListener("change", saveState));
+    fields.forEach((field) => field.addEventListener("input", saveState));
+    resetButton.addEventListener("click", () => {
+      if (!confirm("清空 Day 3 勾选和记录？")) return;
+      localStorage.removeItem(key);
+      loadState();
+    });
+    loadState();
+  </script>
+</body>
+</html>

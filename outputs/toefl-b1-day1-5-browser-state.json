@@ -1,0 +1,42 @@
+{
+  "captured_at": "2026-07-16",
+  "purpose": "Durable local archive of browser-restored Day1-Day5 form state.",
+  "days": {
+    "day1": {
+      "state": {},
+      "note": "No dynamic controls were accessible. The HTML already contains the static completion record."
+    },
+    "day2": {
+      "state": {"c1": true, "c2": true, "c3": true, "c4": true}
+    },
+    "day3": {
+      "state": {
+        "completed_checkboxes": ["c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "c10", "c11", "c12", "c13", "c14", "c15", "c16", "c17", "c18", "c19", "c20", "c21", "c22", "c23", "c24", "c25", "c26", "c27", "c28", "c29", "c30", "c31", "c32", "c33", "c34", "c35"],
+        "scoreSprout": "2/3",
+        "scoreListening1": "4/6",
+        "scoreListening2": "7/8",
+        "scoreReading1": "7/12",
+        "scoreReading2": "5/6",
+        "mainError": "没有理解词汇表达的意思",
+        "bridgeAnswer": "The lecture introduction is mainly about what a happy life is. At first, the teacher talked about what makes people happy. Then, the teacher explained the idea of flow, which means a state where people focus deeply on something and enjoy the process. This helped me understand positive psychology better. Now I understand what I should do if I want to find happiness in my daily life."
+      }
+    },
+    "day4": {
+      "state": {
+        "completed_checkboxes": ["c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "c10", "c11", "c12", "c13", "c14", "c15", "c16", "c17", "c18", "c19", "c20", "c21", "c22", "c23", "c24", "c25", "c26", "c27", "c28", "c29", "c30", "c31", "c32", "c33", "c34", "c35", "c36", "c37", "c38"],
+        "scoreSprout": "3/3"
+      }
+    },
+    "day5": {
+      "state": {
+        "completed_checkboxes": ["c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "c10", "c11", "c12", "c13", "c14", "c15", "c16", "c17", "c18", "c19", "c20", "c21", "c22", "c27", "c28", "c29"],
+        "scoreSprout": "3/3 (100%)",
+        "scoreListening1": "5/6 (83%)",
+        "scoreListening2": "3/6 (50%)",
+        "scoreReading": "12/18 (67%)",
+        "scoreStretch": "暂停，不计分",
+        "answers_saved_in_html": ["feedbackVideo", "q1", "q2", "q3", "q4", "q5", "q6"]
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+# Notes
+
+- User wants Chinese guidance.
+- User wants list/checklist format.
+- User can study 2 hours per day.
+- Plan must include Sprout, specifically B1 native-speaker blog/listening content.
+- Plan must include B1-level listening and reading exercises.
+- Keep answers compact.
+- Future daily plans should be generated with the teach skill workflow and saved as lesson/output files.
+- User wants reading materials closer to TOEFL. Future plans should reduce generic B1 life-reading tasks and use more TOEFL-style short academic passages while keeping B1/B1+ scaffolding.
+- TOEFL-style reading practice should include main idea, purpose, detail/evidence, vocabulary in context, inference, and summary questions. Use topics like education, psychology, biology, environment, history, technology, campus life, and social science.
+- Because Day 4 B1 reading was 7/12 (58%), do not jump to full hard TOEFL passages immediately. Use short academic passages with vocabulary support and exact-sentence evidence first.
+- Day 4 reading error causes: missed details, did not finish the text, and event order was confusing. Future reading plans should include a timeline/order step before answering detail questions.
+- Future daily webpages should place a three-column feedback board at the top: 视频反馈, 阅读反馈, 听力反馈. Use it to record scores, main feedback, error causes, and next-step fixes before the detailed checklist.
+- Day 4 B1+ listening stretch was very challenging: 4/6 and 0/6, combined 4/12 (33%). Academic vocabulary was hard to understand, and fill-in-the-blank questions were difficult. Future B1+ listening should include pre-taught academic vocabulary and easier note-taking before fill-in tasks.
+- For every future learner answer, add a record to that day's webpage and score note: original answer, score, polished version, and feedback.
+- Feedback must name the specific learning problem rather than only correcting grammar. Diagnose relevant areas such as task understanding, missing evidence/detail, unsupported claim, sequence/logic, vocabulary choice, and grammar. Then give one concrete repair action the learner can do in the next answer or review block.
+- Future daily plans: B1 is the main level. Pause B1+ listening until the learner explicitly asks to restart it.
+- Day 5 reading feedback: the short academic passage was relatively easy. Increase the next reading one step to a 280-400 word B1+ academic bridge passage, while retaining a 6-word vocabulary preview, evidence prompts, and the same TOEFL-style question types.
+- Day 5 listening feedback: approximately 70% was understandable and the difficulty was acceptable. The main barrier was unfamiliar vocabulary. Keep B1 listening and pre-teach/review five words from the transcript each day.
