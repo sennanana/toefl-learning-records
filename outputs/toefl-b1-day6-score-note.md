@@ -1,7 +1,7 @@
 # TOEFL B1 Day 6 成绩记录
 
 日期：2026-07-16  
-状态：进行中
+状态：已完成
 
 ## 视频
 
@@ -13,17 +13,17 @@
 
 ## 阅读
 
-- 材料：Breaking News English - People who read live longer，Level 2。
-- 6 题总分：___ / 18
-- Main idea：___ / 3
-- Purpose：___ / 3
-- Detail + evidence：___ / 3
-- Vocabulary in context：___ / 3
-- Inference：___ / 3
-- Summary：___ / 3
-- 难度反馈：
-- 具体问题：
-- 解决动作：
+- 材料：British Council - Robot teachers，B1。
+- 6 题总分：13 / 18（72%，首次作答）
+- Main idea：2 / 3
+- Purpose：3 / 3
+- Detail + evidence：2 / 3
+- Vocabulary in context：2 / 3
+- Inference：3 / 3
+- Summary：1 / 3
+- 难度反馈：科技类说明文难度可接受；能找到核心观点和因果，但 Detail 题会漏时间、人物角色和第二个信息点。
+- 具体问题：单复数和动词形式不稳定（`writer believes`、`robots can`、`enough teachers`）；词义题定义不够精确；Summary 漏掉 limitation。
+- 解决动作：每题写 `Direct answer + one detail`；作答前圈题干的 `who / time / reason`；找 limitation 时回原文定位 `but / unlikely / however`；最后用 20 秒检查 `s`、`a/an` 和复数。
 
 ## 听力
 
@@ -40,4 +40,6 @@
 
 ## Day 6 完成确认
 
-- 待用户确认。
+- 用户于 2026-07-16 确认 Day 6 已完成。
+- 30 / 30 项清单已勾选。
+- 浏览器表单数据已内嵌到 Day 6 网页，并索引至 `toefl-b1-day6-browser-state.json`。

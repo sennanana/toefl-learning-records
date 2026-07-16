@@ -1,0 +1,21 @@
+{
+  "captured_at": "2026-07-16",
+  "purpose": "Durable local archive of completed Day 6 browser form state.",
+  "day6": {
+    "completed_checkboxes": [
+      "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "c10",
+      "c11", "c12", "c13", "c14", "c15", "c16", "c17", "c18", "c19", "c20",
+      "c21", "c22", "c23", "c24", "c25", "c26", "c27", "c28", "c29", "c30"
+    ],
+    "scores": {
+      "scoreSprout": "3/3",
+      "scoreListening1": "5/6 (83%)",
+      "scoreListening2": "3/3 (100%)",
+      "scoreReading": "13/18 (72%)"
+    },
+    "answers_saved_in_html": [
+      "feedbackVideo", "feedbackListening", "feedbackReading", "q1", "q2", "q3", "q4", "q5", "q6"
+    ],
+    "reading_material": "British Council - Robot teachers"
+  }
+}

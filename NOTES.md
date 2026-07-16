@@ -19,4 +19,5 @@
 - Day 5 reading feedback: the short academic passage was relatively easy. Increase the next reading one step to a 280-400 word B1+ academic bridge passage, while retaining a 6-word vocabulary preview, evidence prompts, and the same TOEFL-style question types.
 - Day 5 listening feedback: approximately 70% was understandable and the difficulty was acceptable. The main barrier was unfamiliar vocabulary. Keep B1 listening and pre-teach/review five words from the transcript each day.
 - After the learner confirms a day is complete, persist that day's browser form state into the local HTML and the browser-state JSON archive, then sync the completed HTML to `/Users/senna/Desktop/托福学习`.
-- After each completed-day archive update, commit and push the learning workspace to the private GitHub repository `sennanana/toefl-learning-records`.
+- During an in-progress day, update only the active in-app webpage's form state and `localStorage`. Do not edit archival HTML or score files, copy data to `/Users/senna/Desktop/托福学习`, commit, or push.
+- After the learner confirms a day is complete, commit and push the completed-day archive update to the public GitHub repository `sennanana/toefl-learning-records`.
